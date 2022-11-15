@@ -28,7 +28,8 @@
                 colors: {
                     primary: '#217BF4',
                     title: '#0A093D',
-                    secondary : '#656464'
+                    secondary : '#656464',
+                    blueli : '#171648',
                 }
             }
           }
@@ -54,6 +55,13 @@
             .par-a { /* text 16px line height 28px #656564 */
                 @apply text-base font-normal leading-[26px] font-inter text-secondary
             }
+            .li-join{
+                /* li::before */
+                @apply before:content-[''] before:inline-block before:w-[18px] before:h-[18px] before:bg-[url('./assets/images/logo/li-decor.svg')] before:mr-3 before:bg-cover before:bg-no-repeat 
+                /* li */
+                font-medium text-lg leading-[18px] text-blueli mb-4
+            }
+            
         }
         
       </style>
@@ -111,20 +119,29 @@
         </div>
     </section>
     <section id="join">
-        <div class="container pt-[124px] flex justify-between items-center">
+        <div class="container pt-[124px] flex justify-between items-center mb-[55px]">
             <div class="left items-start w-[406px]">
-                <p class="text-primary text-lg">
+                <p class="text-primary text-lg mb-[10px]">
                     Whats Netbooks?
                 </p>
-                <h1 class="title-a">
+                <h1 class="title-a mb-4">
                     Why Join to Netbook Social Network?
                 </h1>
-                <p class="par-a">Recent surveys have indicated that small businesses recognise the need they have to connect with consumer.</p>
+                <p class="par-a mb-9">Recent surveys have indicated that small businesses recognise the need they have to connect with consumer.</p>
                 <ul>
-                    <li>Groups</li>
-                    <li>Messages</li>
-                    <li>Share</li>
+                    <li class="li-join">Groups</li>
+                    <li class="li-join">Messages</li>
+                    <li class="li-join">Share</li>
                 </ul>
+            </div>
+            <div class="right flex items-center gap-[29px]">
+                <div class="video">
+                    <img src="./assets/images/vid.png" alt="video">
+                </div>
+                <div class="image flex flex-col gap-8">
+                    <img src="./assets/images/jointopimg.png" alt="Netbook">
+                    <img src="./assets/images/joinbotimg.png" alt="Netbook">
+                </div>
             </div>
         </div>
     </section>

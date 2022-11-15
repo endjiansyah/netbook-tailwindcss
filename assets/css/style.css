@@ -21,15 +21,3 @@ input{
 #hero{
     background: linear-gradient(311.76deg, #D4E7FE -15.24%, #FFFFFF 78.85%);
 }
-
-#join ul li::before{
-    
-        content: " ";
-        width:18px;
-        height:18px;
-        background-image:url(../images/logo/li-decor.svg);
-        margin-right: 12px;
-        background-size: cover;
-        background-repeat: no-repeat;
-    
-}
