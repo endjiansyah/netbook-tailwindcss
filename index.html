@@ -46,16 +46,7 @@
             
         }
         @layer components {
-            #hero{
-                @apply pt-[162px] pb-[82.53px] bg-[linear-gradient(311.76deg,_#D4E7FE_-15.24%,_#FFFFFF_78.85%)]
-            }
-            #hero .left{
-                @apply w-[500px] items-center
-            }
 
-            .hero-badge{
-                @apply  px-[30px] py-3 rounded-lg bg-primary/10 text-primary text-xs w-[177px] mb-5
-            }
             .title-hero{
                 @apply font-bold text-[56px] leading-[66px] text-title font-inter
             }
@@ -65,8 +56,25 @@
             .par-a { /* text 16px line height 28px #656564 */
                 @apply text-base font-normal leading-[26px] font-inter text-secondary
             }
+
+            /* ---------------------- */
+            #hero{
+                @apply pt-[162px] pb-[82.53px] mb-24 bg-[linear-gradient(311.76deg,_#D4E7FE_-15.24%,_#FFFFFF_78.85%)]
+            }
+            #hero .left{
+                @apply w-[500px] items-center
+            }
+
+            .hero-badge{
+                @apply  px-[30px] py-3 rounded-lg bg-primary/10 text-primary text-xs w-[177px] mb-5
+            }
+            
+            #hero .action a{
+                @apply py-6 px-[42px] rounded-[14px]  text-[14px] leading-[14px]
+            }
+            
             #join{
-                @apply  pt-[124px] pb-[55px]
+                @apply  py-[34px] mb-[21px]
             }
             #join li{
                 /* li::before */
@@ -77,8 +85,66 @@
             #join .right{
                 @apply  flex items-center gap-[29px]
             }
-            #hero .action a{
-                @apply py-6 px-[42px] rounded-[14px]  text-[14px] leading-[14px]
+            #rating{
+                @apply py-[84px]
+            }
+
+            #rating .card{
+                @apply rounded-[14px] shadow-[0px_26px_49px_rgba(146,_165,_184,_0.14)] pt-[42px] pb-[40px] pl-[44px] pr-[18px] w-[336px]
+            }
+
+            #rating h3{
+                @apply
+                /* before */
+                before:content-[''] before:inline-block before:w-[28px] before:h-[28px] before:mr-[10px] before:bg-cover before:bg-no-repeat 
+
+                /* flexing center */
+                flex items-center
+
+                /* span text */
+                text-xl leading-5 font-medium text-title mb-8   
+            }
+            .card-rating h3{
+                /* gambar bintang */
+                @apply before:bg-[url('./assets/images/logo/Star.svg')]
+            }
+            .card-award h3{
+                /* gambar piala */
+                @apply before:bg-[url('./assets/images/logo/Trophy.svg')]
+            }
+            .gambar-bunder img{
+                @apply inline-block h-6 w-6 rounded-full ring-2 ring-white
+            }
+
+            .member{
+                @apply gap-4 flex items-center
+            }
+            
+            #rating .member h4{
+                @apply text-base leading-[18px] font-medium text-[#5d5b70]
+            }
+            #rating .member h4 span{
+                @apply font-semibold text-primary
+            }
+            .card p{
+                @apply font-normal text-base leading-[26px] text-[#8c8c8c] my-10
+            }
+            #rating .btn-go a{
+                @apply
+                /* after */
+                after:content-[''] after:inline-block after:w-[10px] after:h-[10px] after:ml-2 after:bg-cover after:bg-no-repeat
+                /* flexing center */
+                flex items-center
+
+                /* span text */
+                font-medium text-base leading-4 
+            }
+
+            #rating .card-rating .btn-go a{
+                @apply after:bg-[url('./assets/images/logo/arrowblue.svg')] text-primary
+            }
+            #rating .card-award .btn-go a{
+                @apply after:bg-[url('./assets/images/logo/arrowgray.svg')] text-[#4a4a56]
             }
         }
       </style>
@@ -160,6 +226,59 @@
                     <img src="./assets/images/joinbotimg.png" alt="Netbook">
                 </div>
             </div>
+        </div>
+    </section>
+    <section id="rating">
+        <div class="container flex items-center justify-between">
+            <div class="left flex gap-6">
+                <div class="card card-rating">
+                    <h3 class="">4.8 Rating</h3>
+                    <div class="member">
+                        <div class="gambar-bunder flex -space-x-2 overflow-hidden">
+                            <img src="./assets/images/ikiwong.jpg" alt="man"/>
+                            <img src="./assets/images/ikiwong.jpg" alt="man"/>
+                            <img src="./assets/images/ikiwong.jpg" alt="man"/>
+                        </div>
+                        <div class="total-member"></div>
+                        <h4 class="tracking-[0.02em]">
+                            <span>+836k</span> Members
+                        </h4>
+                    </div>
+                    <p>More than 2 billion we people over countries use socibooks we to stay in touch with friends.</p>
+                    <div class="btn-go">
+                        <a href="#!">Join Our Community</a>
+                    </div>
+                </div>  
+                <div class="card card-award">
+                    <h3>Awwwards</h3>
+                    <div class="member">
+                        <img src="./assets/images/github.png" alt="logo github tapi remuk">
+                        <div class="total-member"></div>
+                        <h4>
+                            Best of <span>2021</span> on Github
+                        </h4>
+                    </div>
+                    <p>More than 2 billion we people over countries use socibooks we to stay in touch with friends.</p>
+                    <div class="btn-go">
+                        <a href="#!">Join Our Community</a>
+                    </div>
+                </div>  
+            </div>
+            <div class="right w-[381px]">
+                <div class=" flex flex-col">
+                <h4 class="text-primary font-medium text-lg leading-[18px] mb-[10px]">
+                    Our Achievement
+                </h4>
+                <h1 class="title-a mb-[18px]">
+                    We are Connecting You The Digital Life.
+                </h1>
+                <p class="text-base font-normal leading-7 text-[#656464] pb-[38px]">
+                    The scope the Social Media becomes crucial Is helps the business to directly engage with their needs and wants.
+                </p>
+
+                    <a href="#!" class="w-[192px] box-border text-center py-[22px] px-[38px] bg-primary text-white -tracking-[0.02em] rounded-[14px]">Discover me</a>
+                </div>
+                </div>
         </div>
     </section>
 </body>
