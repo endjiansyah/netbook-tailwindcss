@@ -46,6 +46,16 @@
             
         }
         @layer components {
+            #hero{
+                @apply pt-[162px] pb-[82.53px] bg-[linear-gradient(311.76deg,_#D4E7FE_-15.24%,_#FFFFFF_78.85%)]
+            }
+            #hero .left{
+                @apply w-[500px] items-center
+            }
+
+            .hero-badge{
+                @apply  px-[30px] py-3 rounded-lg bg-primary/10 text-primary text-xs w-[177px] mb-5
+            }
             .title-hero{
                 @apply font-bold text-[56px] leading-[66px] text-title font-inter
             }
@@ -55,11 +65,20 @@
             .par-a { /* text 16px line height 28px #656564 */
                 @apply text-base font-normal leading-[26px] font-inter text-secondary
             }
+            #join{
+                @apply  pt-[124px] pb-[55px]
+            }
             #join li{
                 /* li::before */
                 @apply before:content-[''] before:inline-block before:w-[18px] before:h-[18px] before:bg-[url('./assets/images/logo/li-decor.svg')] before:mr-3 before:bg-cover before:bg-no-repeat 
                 /* li */
                 flex font-medium text-lg leading-[18px] text-blueli mb-4 items-center font-inter
+            }
+            #join .right{
+                @apply  flex items-center gap-[29px]
+            }
+            #hero .action a{
+                @apply py-6 px-[42px] rounded-[14px]  text-[14px] leading-[14px]
             }
         }
       </style>
@@ -96,10 +115,10 @@
             </div>
         </div>
     </section>
-    <section id="hero" class="pt-[162px] pb-[82.53px] bg-[linear-gradient(311.76deg,_#D4E7FE_-15.24%,_#FFFFFF_78.85%)]">
+    <section id="hero">
         <div class="container flex items-center justify-between">
-            <div class="left w-[500px] items-center">
-                <div class="hero-badge px-[30px] py-3 rounded-lg bg-primary/10 text-primary text-xs w-[177px] mb-5">
+            <div class="left">
+                <div class="hero-badge">
                     Netbook community
                 </div>
                 <h1 class="mb-[18px] title-hero">
@@ -107,8 +126,8 @@
                 </h1>
                 <p class="font-normal text-lg leading-7 text-secondary mb-[42px]">More than 2 billion people in over countries use socibook to stay in touch with friends & family.</p>
                 <div class="action flex gap-[18px]">
-                    <a href="#!" class="py-6 px-[42px] bg-primary text-white rounded-[14px] text-[14px] leading-[14px]">About More</a>
-                    <a href="#!" class="py-6 px-[42px] text-primary border-primary border-[1px] bg-white rounded-[14px] text-[14px] leading-[14px]">About More</a>
+                    <a href="#!" class="bg-primary text-white">About More</a>
+                    <a href="#!" class="text-primary border-primary border-[1px] bg-white box-border">About More</a>
                 </div>
             </div>
             <div class="gambar object-cover">
@@ -117,8 +136,8 @@
         </div>
     </section>
     <section id="join">
-        <div class="container pt-[124px] flex justify-between items-center mb-[55px]">
-            <div class="left items-start w-[406px]">
+        <div class="container flex justify-between items-center">
+            <div class="left items-start w-[406px] -mt-[9px]">
                 <p class="text-primary text-lg mb-[10px]">
                     Whats Netbooks?
                 </p>
@@ -132,7 +151,7 @@
                     <li>Share</li>
                 </ul>
             </div>
-            <div class="right flex items-center gap-[29px]">
+            <div class="right">
                 <div class="video">
                     <img src="./assets/images/vid.png" alt="video">
                 </div>
