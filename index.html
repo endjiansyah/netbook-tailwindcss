@@ -64,6 +64,9 @@
             .title-c{
                 @apply font-semibold text-2xl leading-[26px] text-[#2f2c4a] font-inter
             }
+            .title-d{
+                @apply font-semibold text-3xl leading-[52px] text-[#2f2c4a] font-inter
+            }
             
             .par-a { /* text 16px line height 28px #656564 */
                 @apply text-base font-normal leading-7 font-inter text-secondary font-inter
@@ -196,7 +199,33 @@
 
             /* app */
             #app{
-                @apply pt-11 bg-[#E5F0FD]
+                @apply bg-[#E5F0FD]
+            }
+
+            /* news */
+            #news .line{
+                /* before */
+                @apply flex before:content-[''] before:inline-block before:w-[39px] before:h-[2px] before:bg-[url('./assets/images/logo/line.svg')] before:mr-[14px] before:mt-5 before:bg-cover before:bg-no-repeat 
+            }
+            #news .card h3{
+                @apply
+                
+                /* li */
+                font-semibold text-[20px] leading-8 text-[#2F2C4A] mb-6 font-inter
+                w-[260px]
+            }
+            #news .text a{
+                @apply
+                /* after */
+                after:content-[''] after:inline-block after:w-[10px] after:h-[10px]  after:bg-[url('./assets/images/logo/arrowgray.svg')] after:ml-2 after:bg-cover after:bg-no-repeat
+                /* flexing center */
+                flex items-center
+
+                /* span text */
+                par-c
+            }
+            #news .text a:hover{
+                @apply text-[#217BF4] after:bg-[url('./assets/images/logo/arrowblue.svg')]
             }
         }
       </style>
@@ -444,6 +473,68 @@
             </div>
         </div>
     </section>
-
+    <section id="app">
+        <div class="container flex justify-between">
+            <div class="m-[122px]">
+                <h4 class="blueh4">Get Our Aplication</h4>
+                <h2 class="title-d w-[351px] mb-[18px]">
+                    You Can Easily Find This App…!
+                </h2>
+                <p class="par-b text-secondary w-[341px] mb-9">I say chap that’s suing lavatory chip shop gosh off his smashing boot are you taking the piss posh loo brilliant.</p>
+                <div class="btn-group flex gap-[20px] items-center">
+                    <a href="#!">
+                        <img src="./assets/images/bt-apple.png" alt="apple button">
+                    </a>
+                    <a href="#!">
+                        <img src="./assets/images/bt-ps.png" alt="apple button">
+                    </a>
+                </div>
+            </div>
+            <img src="./assets/images/mobile.png" alt="mobile" class="w-[440px] mt-11">
+        </div>
+    </section>
+    <section id="news" class="py-[130px]">
+        <div class="container">
+            <div class="text-center mb-[10px]">
+                <h4 class="blueh4">Get Our Aplication</h4>
+                <h2 class="title-b mb-[80px]">Latest News</h2>
+            </div>
+            <div class="card-box flex gap-[75px] justify-between">
+                <div class="card">
+                    <img src="./assets/images/news1.png" alt="news" class="mb-[25px]">
+                    <div class="line">
+                        <div class="text">
+                            <h3>
+                                It Does Not Matter Hows Slowly go as Long
+                            </h3>
+                            <a href="#!" class="">Continue Reading</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./assets/images/news2.png" alt="news" class="mb-[25px]">
+                    <div class="line">
+                        <div class="text">
+                            <h3>
+                                Netbook Network Added New Photo Filter
+                            </h3>
+                            <a href="#!" class="">Continue Reading</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./assets/images/news3.png" alt="news" class="mb-[25px]">
+                    <div class="line">
+                        <div class="text">
+                            <h3>
+                                We Optimised Netbooks Better Navigation
+                            </h3>
+                            <a href="#!" class="">Continue Reading</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
