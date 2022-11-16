@@ -25,11 +25,10 @@
             }
             ,
             container: {
-                // padding:{
-                //     sm: '20px',
-                //     md: '20px',
-                //     lg: '20px'
-                // },
+                padding:{
+                    sm: '20px',
+                    md: '20px'
+                },
                 screens:{
                     xl: '1170px',
                 },
@@ -298,7 +297,7 @@
 </head>
 <body>
   
-    <nav id="header" class="border-b-[1px] border-[primary]/10">
+    <nav id="header" class="border-b-[1px] border-[primary]/10 fixed w-full top-0 bg-white/90 backdrop-blur z-20">
         <div class="container flex justify-between flex-wrap lg:flex-nowrap items-center lg:gap-[70px] gap-5 pt-[22px] pb-[18px]">
             <div class="image-box">
                 <img src="./assets/images/logo/logo.svg" alt="logo Netbook">
@@ -330,7 +329,7 @@
                         <div class="search-box flex gap-2 items-center border-b-2 w-[105px]">
                             <img src="./assets/images/logo/koco.svg" alt="magni" class="w-3 h-3 object-contain">
                             <form action="">
-                                <input type="text" name="aaa" id="hilih" class="text-xs bg-white/0 border-0 outline-0 w-[90px]" placeholder="Search here ...">
+                                <input type="text" name="aaa" id="hilih" class="text-xs bg-white/0 focus:ring-transparent border-0 w-[90px]" placeholder="Search here ...">
                             </form>
                         </div>
                         <div class="button">
@@ -344,7 +343,7 @@
         </div>
     </nav>
     <section id="hero">
-        <div class="container flex items-center justify-center lg:justify-between flex-wrap lg:flex-nowrap">
+        <div class="container flex items-center justify-center lg:justify-between flex-wrap lg:flex-nowrap gap-5">
             <div class="left">
                 <div class="hero-badge">
                     Netbook community
@@ -364,7 +363,7 @@
         </div>
     </section>
     <section id="join">
-        <div class="container flex justify-between items-center">
+        <div class="container flex flex-wrap flex-wrap-reverse justify-center lg:flex-nowrap lg:justify-between items-center gap-5">
             <div class="left items-start w-[406px] -mt-[9px]">
                 <p class="text-primary text-lg mb-[10px]">
                     Whats Netbooks?
@@ -391,8 +390,8 @@
         </div>
     </section>
     <section id="rating">
-        <div class="container flex items-center justify-between">
-            <div class="left flex gap-6">
+        <div class="container flex flex-wrap lg:flex-nowrap items-center lg:justify-between justify-center gap-5">
+            <div class="left flex gap-6 flex-wrap lg:flex-nowrap items-center md:justify-between justify-center">
                 <div class="card card-rating">
                     <h3 class="">4.8 Rating</h3>
                     <div class="member">
@@ -521,7 +520,7 @@
                     <a href="#!" class="btn-active">Active</a>
                 </div>
             </div>
-            <div class="card-group flex gap-[30px] mt-11">
+            <div class="card-group flex flex-wrap justify-center gap-5 mt-11 lg:justify-between">
                 <div class="card">
                     <div class="img-box">
                         <img src="./assets/images/member1.png" alt="member" class="absolute top-3 w-[142px] h-[142px]">
@@ -558,8 +557,8 @@
         </div>
     </section>
     <section id="app">
-        <div class="container flex justify-between">
-            <div class="my-[122px]">
+        <div class="container flex flex-wrap justify-center lg:justify-between gap-5">
+            <div class="mt-8 lg:my-[122px]">
                 <h4 class="blueh4">Get Our Aplication</h4>
                 <h2 class="title-d w-[351px] mb-[18px]">
                     You Can Easily Find This App…!
@@ -578,12 +577,12 @@
         </div>
     </section>
     <section id="news" class="py-[125px]">
-        <div class="container">
+        <div class="container justify-center ">
             <div class="text-center mb-[10px]">
                 <h4 class="blueh4">Get Our Aplication</h4>
                 <h2 class="title-b mb-[80px]">Latest News</h2>
             </div>
-            <div class="card-box flex gap-[75px] justify-between">
+            <div class="card-box flex flex-wrap gap-5  justify-center lg:justify-between">
                 <div class="card">
                     <img src="./assets/images/news1.png" alt="news" class="mb-[25px]">
                     <div class="line">
@@ -621,8 +620,8 @@
         </div>
     </section>
     <section id="footer">
-        <div class="container flex justify-between">
-            <div class="left flex gap-[98px]">
+        <div class="container flex lg:justify-between flex-wrap lg:flex-nowrap justify-center gap-9">
+            <div class="left flex gap-5 md:justify-between lg:gap-10 flex-wrap justify-center">
                 <ul>
                     <li class="font-medium text-xl leading-5 text-white font-Inter mb-[38px]">
                         <h1>Home</h1>
@@ -711,7 +710,7 @@
         </div>
     </section>
     <section id="footernya-footer" class="bg-[#20202d] py-[30px]">
-        <div class="container flex justify-between items-center">
+        <div class="container flex flex-wrap justify-between items-center">
             <p>
                 Besnik Creative Agency.
             </p>
