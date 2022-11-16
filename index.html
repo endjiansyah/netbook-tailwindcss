@@ -57,6 +57,14 @@
         }
         @layer components {
 
+            .container{
+                @apply px-5
+            }
+
+            body{
+                @apply w-full
+            }
+
             #header input{
                 @apply font-inter
             }
@@ -66,7 +74,7 @@
             }
 
             .title-hero{
-                @apply font-bold text-[56px] leading-[66px] text-title font-inter
+                @apply font-bold text-3xl lg:text-[56px] lg:leading-[66px] text-title font-inter
             }
             .title-a { /* text 36px line height 48px #0a093d*/
                 @apply text-4xl font-bold leading-[48px] font-inter text-title font-inter
@@ -171,11 +179,11 @@
             }
 
             #hero .left{
-                @apply w-[500px] items-center
+                @apply lg:w-[500px] items-center
             }
 
             .hero-badge{
-                @apply  px-[30px] py-3 rounded-lg bg-primary/10 text-primary text-xs w-[177px] mb-5
+                @apply  md:px-[30px] py-3 rounded-lg bg-primary/10 text-primary text-xs w-[177px] mb-5
             }
 
             #hero .left p{
@@ -183,7 +191,7 @@
             }
             
             #hero .action a{
-                @apply py-6 px-[42px] rounded-[14px]  text-[14px] leading-[14px]
+                @apply px-3 py-2 lg:py-6 lg:px-[42px] rounded-[14px]  text-[14px] leading-[14px]
             }
             
             #join{
@@ -201,7 +209,7 @@
                 flex font-medium text-lg leading-[18px] text-blueli mb-4 items-center font-inter
             }
             #join .right{
-                @apply  flex items-center gap-[29px]
+                @apply  flex items-center lg:gap-[29px]
             }
             #rating{
                 @apply py-[84px] mb-[55px]
@@ -224,7 +232,7 @@
             }
 
             #rating .card{
-                @apply rounded-[14px] shadow-[0px_26px_49px_rgba(146,_165,_184,_0.14)] pt-[42px] pb-[40px] pl-[44px] pr-[18px] w-[336px]
+                @apply rounded-[14px] shadow-[0px_26px_49px_rgba(146,_165,_184,_0.14)] pt-[42px] pb-[40px] pl-[44px] pr-[18px] md:w-[336px]
             }
 
             #rating h3{
@@ -281,7 +289,7 @@
 
 
             #rating .right a{
-                @apply w-[192px] box-border text-center py-[22px] px-[38px] bg-primary text-white -tracking-[0.02em] rounded-[14px]
+                @apply md:w-[192px] box-border text-center py-[22px] px-[38px] bg-primary text-white -tracking-[0.02em] rounded-[14px]
             }
 
             /* community */
@@ -290,11 +298,16 @@
             }
 
             #community .card{
-                @apply pt-10 pl-10 pr-[65px] flex bg-white w-[522px] h-[182px] rounded-[14px] shadow-[14px_22px_52px_-12px_rgba(127,_127,_127,_0.13)] items-start hover:drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]
+                @apply p-2 lg:pt-10 lg:pl-10 lg:pr-[65px] flex bg-white md:w-[522px] h-auto rounded-[14px] shadow-[14px_22px_52px_-12px_rgba(127,_127,_127,_0.13)] items-start hover:drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] flex-wrap justify-center
             }
 
             #community .text-card{
                 @apply mt-[6px] flex flex-col gap-[14px]
+                justify-center md:justify-start text-center
+            }
+
+            #community .text-card .title-c{
+                @apply justify-center md:justify-start
             }
 
             /* member */
@@ -303,7 +316,7 @@
             }
 
             #member .btn-group{
-                @apply flex justify-between p-2 mx-auto bg-primary/10 rounded-[14px] w-[474px]
+                @apply flex flex-wrap flex-col md:flex-row justify-center md:justify-between p-2 mx-auto bg-primary/10 rounded-[14px] md:w-[474px]
             }
 
             #member .btn-group a{
@@ -319,7 +332,7 @@
             }
 
             #member .card-group .card{
-                @apply  flex flex-col justify-center text-center py-[30px] px-[52px] rounded-[14px] border-[2px] border-[0px_34px_68px_rgba(116,_115,_128,_0.1)] 
+                @apply  flex flex-col justify-center text-center py-[30px] md:px-[52px] rounded-[14px] border-[2px] border-[0px_34px_68px_rgba(116,_115,_128,_0.1)] 
             }
 
             #member .card-group .card .img-box{
@@ -353,7 +366,7 @@
                 
                 /* li */
                 font-semibold text-[20px] leading-8 text-[#2F2C4A] mb-6 font-inter
-                w-[260px]
+                md:w-[260px]
             }
             #news .text a{
                 @apply
@@ -386,7 +399,7 @@
                 @apply font-normal text-base leading-[46px] text-[#e7e7e7] tracking-[0.0125em]
             }
             #footer .right h3{
-                @apply font-semibold text-[20px] leading-8 text-white mb-6 font-inter mb-[18px] w-[173px]
+                @apply font-semibold text-[20px] leading-8 text-white mb-6 font-inter md:w-[173px]
             }
 
             #footer .input-box{
@@ -472,7 +485,7 @@
     </section>
     <section id="join">
         <div class="container">
-            <div class="left items-start w-[406px] -mt-[9px]">
+            <div class="left items-start md:w-[406px] -mt-[9px]">
                 <p class="text-primary text-lg mb-[10px]">
                     Whats Netbooks?
                 </p>
@@ -533,7 +546,7 @@
                     </div>
                 </div>  
             </div>
-            <div class="right w-[381px]">
+            <div class="right md:w-[381px]">
                 <div class=" flex flex-col">
                 <h4 class="blueh4">
                     Our Achievement
@@ -559,7 +572,7 @@
                 <h2 class="title-b mt-[9px] mb-[19px]">
                     Community Main Feature
                 </h2>
-                <p class="par-a mx-auto w-[421px] mb-16">The wise man therefore always holds in these matters to this principle of selection.</p>
+                <p class="par-a mx-auto max-w-[421px] mb-16">The wise man therefore always holds in these matters to this principle of selection.</p>
             </div>
             <div class="flex flex-wrap gap-11 justify-center">
                 <div class="card">
@@ -621,7 +634,7 @@
                 <h2 class="title-b mt-[10px] mb-[18px]">
                     Our Active Member
                 </h2>
-                <p class="par-a mx-auto w-[454px] mb-[38px]">when an unknown printer took a galley of type and meeting fari scrambled it.</p>
+                <p class="par-a mx-auto max-w-[454px] mb-[38px]">when an unknown printer took a galley of type and meeting fari scrambled it.</p>
                 <div class="btn-group">
                     <a href="#!">Newst</a>
                     <a href="#!">Popular</a>
@@ -668,11 +681,11 @@
         <div class="container">
             <div class="mt-8 lg:my-[122px]">
                 <h4 class="blueh4">Get Our Aplication</h4>
-                <h2 class="title-d w-[351px] mb-[18px]">
+                <h2 class="title-d lg:w-[351px] mb-[18px]">
                     You Can Easily Find This App…!
                 </h2>
-                <p class="par-b text-secondary w-[341px] mb-9">I say chap that’s suing lavatory chip shop gosh off his smashing boot are you taking the piss posh loo brilliant.</p>
-                <div class="btn-group flex gap-[20px] items-center">
+                <p class="par-b text-secondary lg:w-[341px] mb-9">I say chap that’s suing lavatory chip shop gosh off his smashing boot are you taking the piss posh loo brilliant.</p>
+                <div class="btn-group flex gap-2 md:gap-5 items-center">
                     <a href="#!">
                         <img src="./assets/images/bt-apple.png" alt="apple button">
                     </a>
@@ -681,7 +694,7 @@
                     </a>
                 </div>
             </div>
-            <img src="./assets/images/mobile.png" alt="mobile" class="w-[440px] mt-11">
+            <img src="./assets/images/mobile.png" alt="mobile" class="lg:w-[440px] mt-11">
         </div>
     </section>
     <section id="news" class="py-[125px]">
@@ -839,12 +852,12 @@
                 <h3>
                     Subscribe Cirkle Newsletter
                 </h3>
-                <p class="par-a text-white w-[299px] mb-8">
+                <p class="par-a text-white max-w-[299px] mb-8">
                     Subscribe to be the first one to know about updates. Enter your email
                 </p>
                 <div class="input-box">
-                    <form action="post" class="pl-6 flex items-center">
-                        <input type="text" name="input" id="aaa" placeholder="Email Address" class="bg-white/0 border-0 focus:ring-transparent">
+                    <form action="post" class="md:pl-6 flex items-center justify-between">
+                        <input type="text" name="input" id="aaa" placeholder="Email Address" class="bg-white/0 border-0 focus:ring-transparent w-[150px]">
                         <button class="">
                             Subscribe
                         </button>
