@@ -267,16 +267,18 @@
                 /* flexing center */
                 flex items-center
 
+                /* not hover (normal) */
+
+                after:bg-[url('./assets/images/logo/arrowgray.svg')] text-[#4a4a56]
+
                 /* span text */
                 font-medium text-base leading-4 
             }
 
-            #rating .card-rating .btn-go a{
+            #rating .btn-go a:hover{
                 @apply after:bg-[url('./assets/images/logo/arrowblue.svg')] text-primary
             }
-            #rating .card-award .btn-go a{
-                @apply after:bg-[url('./assets/images/logo/arrowgray.svg')] text-[#4a4a56]
-            }
+
 
             #rating .right a{
                 @apply w-[192px] box-border text-center py-[22px] px-[38px] bg-primary text-white -tracking-[0.02em] rounded-[14px]
@@ -726,70 +728,106 @@
             <div class="left">
                 <ul>
                     <li class="font-medium text-xl leading-5 text-white font-Inter mb-[38px]">
-                        <h1>Home</h1>
+                            <h1>Home</h1>
+                        </a>
                     </li>
                     <li class="text">
-                        Home
+                        <a href="#!">
+                            Home
+                        </a>
                     </li>
                     <li class="text">
-                        community
+                        <a href="#!">
+                            community
+                        </a>
                     </li>
                     <li class="text">
-                        Event
+                        <a href="#!">
+                            Event
+                        </a>
                     </li>
                     <li class="text">
-                        Contact
+                        <a href="#!">
+                            Contact
+                        </a>
                     </li>
                 </ul>
                 <ul>
                     <li class="font-medium text-xl leading-5 text-white font-Inter mb-[38px]">
-                        <h1>Resources</h1>
+                            <h1>Resources</h1>
+                        </a>
                     </li>
                     <li class="text">
-                        Blog
+                        <a href="#!">
+                            Blog
+                        </a>
                     </li>
                     <li class="text">
-                        News
+                        <a href="#!">
+                            News
+                        </a>
                     </li>
                     <li class="text">
-                        Guides
+                        <a href="#!">
+                            Guides
+                        </a>
                     </li>
                     <li class="text">
-                        Help Center
+                        <a href="#!">
+                            Help Center
+                        </a>
                     </li>
                 </ul>
                 <ul>
                     <li class="font-medium text-xl leading-5 text-white font-Inter mb-[38px]">
-                        <h1>Community</h1>
+                            <h1>Community</h1>
+                        </a>
                     </li>
                     <li class="text">
-                        NewsFeed
+                        <a href="#!">
+                            NewsFeed
+                        </a>
                     </li>
                     <li class="text">
-                        Profile 
+                        <a href="#!">
+                            Profile 
+                        </a>
                     </li>
                     <li class="text">
-                        Friends
+                        <a href="#!">
+                            Friends
+                        </a>
                     </li>
                     <li class="text">
-                        Forums
+                        <a href="#!">
+                            Forums
+                        </a>
                     </li>
                 </ul>
                 <ul>
                     <li class="font-medium text-xl leading-5 text-white font-Inter mb-[38px]">
-                        <h1>Main Links</h1>
+                            <h1>Main Links</h1>
+                        </a>
                     </li>
                     <li class="text">
-                        Members
+                        <a href="#!">
+                            Members
+                        </a>
                     </li>
                     <li class="text">
-                        Activity 
+                        <a href="#!">
+                            Activity 
+                        </a>
                     </li>
                     <li class="text">
-                        Groups
+                        <a href="#!">
+                            Groups
+                        </a>
                     </li>
                     <li class="text">
-                        Private Group
+                        <a href="#!">
+                            Private Group
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -802,7 +840,7 @@
                 </p>
                 <div class="input-box">
                     <form action="post" class="pl-6 flex items-center">
-                        <input type="text" name="input" id="aaa" placeholder="Email Address" class="bg-white/0">
+                        <input type="text" name="input" id="aaa" placeholder="Email Address" class="bg-white/0 border-0 focus:ring-transparent">
                         <button class="">
                             Subscribe
                         </button>
