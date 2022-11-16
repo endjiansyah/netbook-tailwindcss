@@ -227,6 +227,30 @@
             #news .text a:hover{
                 @apply text-[#217BF4] after:bg-[url('./assets/images/logo/arrowblue.svg')]
             }
+
+            /* footer */
+            #footer{
+                @apply bg-[#2b2b39] pt-[78px] pb-[85px]
+            }
+
+            #footer .text{
+                @apply font-normal text-base leading-[46px] text-[#e7e7e7] tracking-[0.0125em]
+            }
+            #footer .right h3{
+                @apply font-semibold text-[20px] leading-8 text-white mb-6 font-inter mb-[18px] w-[173px]
+            }
+
+            #footer .input-box{
+                @apply  rounded-xl border-[1px] border-[rgba(255,_255,_255,_0.85)]
+            }
+            #footer .input-box button{
+                @apply py-4 px-6 text-[#2b2b39] text-base leading-4 font-medium bg-white rounded-xl
+            }
+
+            /* footernya-footer */
+            #footernya-footer p{
+                @apply font-normal text-sm leading-[14px] text-[#f6f6f6]
+            }
         }
       </style>
 </head>
@@ -493,7 +517,7 @@
             <img src="./assets/images/mobile.png" alt="mobile" class="w-[440px] mt-11">
         </div>
     </section>
-    <section id="news" class="py-[130px]">
+    <section id="news" class="py-[125px]">
         <div class="container">
             <div class="text-center mb-[10px]">
                 <h4 class="blueh4">Get Our Aplication</h4>
@@ -533,6 +557,110 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+    <section id="footer">
+        <div class="container flex justify-between">
+            <div class="left flex gap-[98px]">
+                <ul>
+                    <li class="font-medium text-xl leading-5 text-white font-Inter mb-[38px]">
+                        <h1>Home</h1>
+                    </li>
+                    <li class="text">
+                        Home
+                    </li>
+                    <li class="text">
+                        community
+                    </li>
+                    <li class="text">
+                        Event
+                    </li>
+                    <li class="text">
+                        Contact
+                    </li>
+                </ul>
+                <ul>
+                    <li class="font-medium text-xl leading-5 text-white font-Inter mb-[38px]">
+                        <h1>Resources</h1>
+                    </li>
+                    <li class="text">
+                        Blog
+                    </li>
+                    <li class="text">
+                        News
+                    </li>
+                    <li class="text">
+                        Guides
+                    </li>
+                    <li class="text">
+                        Help Center
+                    </li>
+                </ul>
+                <ul>
+                    <li class="font-medium text-xl leading-5 text-white font-Inter mb-[38px]">
+                        <h1>Community</h1>
+                    </li>
+                    <li class="text">
+                        NewsFeed
+                    </li>
+                    <li class="text">
+                        Profile 
+                    </li>
+                    <li class="text">
+                        Friends
+                    </li>
+                    <li class="text">
+                        Forums
+                    </li>
+                </ul>
+                <ul>
+                    <li class="font-medium text-xl leading-5 text-white font-Inter mb-[38px]">
+                        <h1>Main Links</h1>
+                    </li>
+                    <li class="text">
+                        Members
+                    </li>
+                    <li class="text">
+                        Activity 
+                    </li>
+                    <li class="text">
+                        Groups
+                    </li>
+                    <li class="text">
+                        Private Group
+                    </li>
+                </ul>
+            </div>
+            <div class="right">
+                <h3>
+                    Subscribe Cirkle Newsletter
+                </h3>
+                <p class="par-a text-white w-[299px] mb-8">
+                    Subscribe to be the first one to know about updates. Enter your email
+                </p>
+                <div class="input-box">
+                    <form action="post" class="pl-6 flex items-center">
+                        <input type="text" name="input" id="aaa" placeholder="Email Address" class="bg-white/0">
+                        <button class="">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="footernya-footer" class="bg-[#20202d] py-[30px]">
+        <div class="container flex justify-between items-center">
+            <p>
+                Besnik Creative Agency.
+            </p>
+            <img src="./assets/images/logo/logo-footer.svg" alt="netbook">
+            <div class="btn-box flex gap-2">
+                <a href="#!"><img src="./assets/images/logo/Twitter.svg" alt="twitter"></a>
+                <a href="#!"><img src="./assets/images/logo/instagram.svg" alt="instagram"></a>
+                <a href="#!"><img src="./assets/images/logo/facebook.svg" alt="facebook"></a>
+                <a href="#!"><img src="./assets/images/logo/Linkedin.svg" alt="Linkedin.svg"></a>
             </div>
         </div>
     </section>
