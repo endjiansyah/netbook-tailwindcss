@@ -111,7 +111,25 @@
 
             /* ---------------------- */
             #header .container{
-                @apply px-5
+                @apply px-5 flex justify-between flex-wrap lg:flex-nowrap items-center lg:gap-[70px] gap-5 pt-[22px] pb-[18px]
+            }
+
+            .hamburger{
+                @apply inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600
+            }
+
+            #header .hidenisasi{
+                @apply flex justify-between flex-col gap-5 items-center
+
+                /* > MD */
+                md:flex-row md:gap-0
+            }
+
+            #header .menu-navigation ul{
+                @apply flex gap-8 flex-col   text-center justify-center
+
+                /* > MD */
+                md:flex-row 
             }
 
             #header .menu-navigation a{
@@ -122,15 +140,46 @@
                 @apply text-[#2b2b39] font-bold
             }
 
+            #header .menu-action{
+                @apply flex gap-5 flex-col 
+ 
+                /* > md */
+                md:flex-row 
+                /* > lg */
+                lg:gap-[47px] lg:flex-row
+            }
+
+            #header .search-box{
+                @apply flex gap-2 items-center border-b-2 w-[105px]
+            }
+
+            #header .search-box input{
+                @apply text-xs bg-white/0 focus:ring-transparent border-0 w-[90px]
+            }
+
+            #header .button button{
+                @apply py-[18px] px-[44px] bg-primary text-white rounded-[14px] text-xs leading-[14px]
+            }
+
+
             #hero{
                 @apply pt-[162px] pb-[82.53px] mb-24 bg-[linear-gradient(311.76deg,_#D4E7FE_-15.24%,_#FFFFFF_78.85%)]
             }
+
+            #hero .container{
+                @apply flex items-center justify-center lg:justify-between flex-wrap lg:flex-nowrap gap-5
+            }
+
             #hero .left{
                 @apply w-[500px] items-center
             }
 
             .hero-badge{
                 @apply  px-[30px] py-3 rounded-lg bg-primary/10 text-primary text-xs w-[177px] mb-5
+            }
+
+            #hero .left p{
+                @apply font-normal text-lg leading-7 text-secondary mb-[42px]
             }
             
             #hero .action a{
@@ -140,6 +189,11 @@
             #join{
                 @apply  py-[34px] mb-[21px]
             }
+
+            #join .container{
+                @apply flex flex-wrap flex-wrap-reverse justify-center lg:flex-nowrap lg:justify-between items-center gap-5
+            }
+
             #join li{
                 /* li::before */
                 @apply before:content-[''] before:inline-block before:w-[18px] before:h-[18px] before:bg-[url('./assets/images/logo/li-decor.svg')] before:mr-3 before:bg-cover before:bg-no-repeat 
@@ -151,6 +205,22 @@
             }
             #rating{
                 @apply py-[84px] mb-[55px]
+            }
+
+            #rating .container{
+                @apply flex flex-wrap items-center justify-center gap-5
+
+                /* > lg */
+                lg:flex-nowrap lg:justify-between
+            }
+
+            #rating .left{
+                @apply flex gap-6 flex-wrap  items-center  justify-center
+
+                /* >md */
+                md:justify-between 
+                /* >lg */
+                lg:flex-nowrap
             }
 
             #rating .card{
@@ -208,6 +278,10 @@
                 @apply after:bg-[url('./assets/images/logo/arrowgray.svg')] text-[#4a4a56]
             }
 
+            #rating .right a{
+                @apply w-[192px] box-border text-center py-[22px] px-[38px] bg-primary text-white -tracking-[0.02em] rounded-[14px]
+            }
+
             /* community */
             #community{
                @apply bg-[linear-gradient(0deg,_rgba(241,_246,_253,_0)_1.63%,_#F1F6FD_20.5%,_#F1F6FD_58.57%,_#FFFFFF_100%)] pt-[60px] pb-20 mb-[46px]
@@ -217,9 +291,17 @@
                 @apply pt-10 pl-10 pr-[65px] flex bg-white w-[522px] h-[182px] rounded-[14px] shadow-[14px_22px_52px_-12px_rgba(127,_127,_127,_0.13)] items-start hover:drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]
             }
 
+            #community .text-card{
+                @apply mt-[6px] flex flex-col gap-[14px]
+            }
+
             /* member */
             #member{
                 @apply py-[84px] mb-[46px]
+            }
+
+            #member .btn-group{
+                @apply flex justify-between p-2 mx-auto bg-primary/10 rounded-[14px] w-[474px]
             }
 
             #member .btn-group a{
@@ -228,6 +310,10 @@
             }
             #member .btn-group a.btn-active{
                 @apply rounded-[14px] text-white bg-primary
+            }
+
+            #member .card-group{
+                @apply flex flex-wrap justify-center gap-5 mt-11 lg:justify-between
             }
 
             #member .card-group .card{
@@ -243,7 +329,15 @@
                 @apply bg-[#E5F0FD]
             }
 
+            #app .container{
+                @apply flex flex-wrap justify-center lg:justify-between gap-5
+            }
+
             /* news */
+            #news .card-box{
+                @apply flex flex-wrap gap-5  justify-center lg:justify-between
+            }
+
             #news .line{
                 /* before */
                 @apply flex before:content-[''] before:inline-block before:w-[39px] before:h-[2px] before:bg-[url('./assets/images/logo/line.svg')] before:mr-[14px] before:mt-5 before:bg-cover before:bg-no-repeat 
@@ -274,6 +368,14 @@
                 @apply bg-[#2b2b39] pt-[78px] pb-[85px]
             }
 
+            #footer .container{
+                @apply flex lg:justify-between flex-wrap lg:flex-nowrap justify-center gap-9
+            }
+
+            #footer .left{
+                @apply flex gap-5 md:justify-between lg:gap-10 flex-wrap justify-center
+            }
+
             #footer .text{
                 @apply font-normal text-base leading-[46px] text-[#e7e7e7] tracking-[0.0125em]
             }
@@ -298,22 +400,22 @@
 <body>
   
     <nav id="header" class="border-b-[1px] border-[primary]/10 fixed w-full top-0 bg-white/90 backdrop-blur z-20">
-        <div class="container flex justify-between flex-wrap lg:flex-nowrap items-center lg:gap-[70px] gap-5 pt-[22px] pb-[18px]">
+        <div class="container">
             <div class="image-box">
                 <img src="./assets/images/logo/logo.svg" alt="logo Netbook">
             </div>
 
             <!-- btn hamburger -->
-            <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+            <button data-collapse-toggle="navbar-default" type="button" class="hamburger" aria-controls="navbar-default" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
                 <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
             </button>
             
             <div id="navbar-default" class="hidden lg:block w-full">
-                <div class="flex justify-between flex-col gap-5 md:flex-row md:gap-0 lg:flex-row items-center">
+                <div class="hidenisasi">
                     <!-- left -->
                     <div class="menu-navigation flex items-center">
-                        <ul class="flex gap-8 flex-col lg:flex-row md:flex-row text-center justify-center">
+                        <ul>
                             <li><a href="#!" class="font-inter text-secondary active">Home</a></li>
                             <li class="flex gap-[5px] items-center">
                                 <a href="#!"class="font-inter text-secondary">Community</a>
@@ -325,15 +427,15 @@
                     </div>
 
                     <!-- right -->
-                    <div class="menu-action flex lg:gap-[47px] gap-5 flex-col md:flex-row lg:flex-row">
-                        <div class="search-box flex gap-2 items-center border-b-2 w-[105px]">
+                    <div class="menu-action">
+                        <div class="search-box">
                             <img src="./assets/images/logo/koco.svg" alt="magni" class="w-3 h-3 object-contain">
-                            <form action="">
-                                <input type="text" name="aaa" id="hilih" class="text-xs bg-white/0 focus:ring-transparent border-0 w-[90px]" placeholder="Search here ...">
+                            <form action="post">
+                                <input type="text" name="aaa" id="hilih" class="" placeholder="Search here ...">
                             </form>
                         </div>
                         <div class="button">
-                            <button class="py-[18px] px-[44px] bg-primary text-white rounded-[14px] text-xs leading-[14px]">Log in</button>
+                            <button>Log in</button>
                         </div>
                     </div>
                 </div>
@@ -343,7 +445,7 @@
         </div>
     </nav>
     <section id="hero">
-        <div class="container flex items-center justify-center lg:justify-between flex-wrap lg:flex-nowrap gap-5">
+        <div class="container">
             <div class="left">
                 <div class="hero-badge">
                     Netbook community
@@ -351,7 +453,7 @@
                 <h1 class="mb-[18px] title-hero">
                     Your Solutions For Community!
                 </h1>
-                <p class="font-normal text-lg leading-7 text-secondary mb-[42px]">More than 2 billion people in over countries use socibook to stay in touch with friends & family.</p>
+                <p>More than 2 billion people in over countries use socibook to stay in touch with friends & family.</p>
                 <div class="action flex gap-[18px]">
                     <a href="#!" class="bg-primary text-white">About More</a>
                     <a href="#!" class="text-primary border-primary border-[1px] bg-white box-border">About More</a>
@@ -363,7 +465,7 @@
         </div>
     </section>
     <section id="join">
-        <div class="container flex flex-wrap flex-wrap-reverse justify-center lg:flex-nowrap lg:justify-between items-center gap-5">
+        <div class="container">
             <div class="left items-start w-[406px] -mt-[9px]">
                 <p class="text-primary text-lg mb-[10px]">
                     Whats Netbooks?
@@ -390,8 +492,8 @@
         </div>
     </section>
     <section id="rating">
-        <div class="container flex flex-wrap lg:flex-nowrap items-center lg:justify-between justify-center gap-5">
-            <div class="left flex gap-6 flex-wrap lg:flex-nowrap items-center md:justify-between justify-center">
+        <div class="container">
+            <div class="left">
                 <div class="card card-rating">
                     <h3 class="">4.8 Rating</h3>
                     <div class="member">
@@ -437,9 +539,9 @@
                     The scope the Social Media becomes crucial Is helps the business to directly engage with their needs and wants.
                 </p>
 
-                    <a href="#!" class="w-[192px] box-border text-center py-[22px] px-[38px] bg-primary text-white -tracking-[0.02em] rounded-[14px]">Discover me</a>
+                <a href="#!">Discover me</a>
                 </div>
-                </div>
+            </div>
         </div>
     </section>
     <section id="community">
@@ -459,42 +561,42 @@
                         <img src="./assets/images/logo/Icon1.svg" alt="icon 1">
                     </div> -->
                     <img src="./assets/images/ico1.png" alt="icon" class="object-contain" class="object-contain">
-                    <div class="text-card mt-[6px] flex flex-col gap-[14px]">
+                    <div class="text-card">
                         <h1 class="title-c">Members, Friends</h1>
                         <p class="par-b text-secondary">Members, Friends Connection ( like followers ), Private Message</p>
                     </div>
                 </div>
                 <div class="card">
                     <img src="./assets/images/ico2.png" alt="icon" class="object-contain">
-                    <div class="text-card mt-[6px] flex flex-col gap-[14px]">
+                    <div class="text-card">
                         <h1 class="title-c">Groups</h1>
                         <p class="par-b text-secondary">Your users can create groups to let other users to join and talk</p>
                     </div>
                 </div>
                 <div class="card">
                     <img src="./assets/images/ico3.png" alt="icon" class="object-contain">
-                    <div class="text-card mt-[6px] flex flex-col gap-[14px]">
+                    <div class="text-card">
                         <h1 class="title-c">Forum</h1>
                         <p class="par-b text-secondary">Forum is ready by BBPress. Your users can make topics and talk.</p>
                     </div>
                 </div>
                 <div class="card">
                     <img src="./assets/images/ico4.png" alt="icon" class="object-contain">
-                    <div class="text-card mt-[6px] flex flex-col gap-[14px]">
+                    <div class="text-card">
                         <h1 class="title-c">Custom Module</h1>
                         <p class="par-b text-secondary">You can create Members, Groups Module. We already created 3 modules. It's by drag & drop live builder.</p>
                     </div>
                 </div>
                 <div class="card">
                     <img src="./assets/images/ico5.png" alt="icon" class="object-contain">
-                    <div class="text-card mt-[6px] flex flex-col gap-[14px]">
+                    <div class="text-card">
                         <h1 class="title-c">List Builder</h1>
                         <p class="par-b text-secondary">Members, Groups list can be modified by drag & drop live builder.</p>
                     </div>
                 </div>
                 <div class="card">
                     <img src="./assets/images/ico6.png" alt="icon" class="object-contain">
-                    <div class="text-card mt-[6px] flex flex-col gap-[14px]">
+                    <div class="text-card">
                         <h1 class="title-c">List Scroll Effects</h1>
                         <p class="par-b text-secondary">8 different scroll effects are ready.
                             You can always change by your tastes.</p>
@@ -514,13 +616,13 @@
                     Our Active Member
                 </h2>
                 <p class="par-a mx-auto w-[454px] mb-[38px]">when an unknown printer took a galley of type and meeting fari scrambled it.</p>
-                <div class="btn-group flex justify-between p-2 mx-auto bg-primary/10 rounded-[14px] w-[474px]">
+                <div class="btn-group">
                     <a href="#!">Newst</a>
                     <a href="#!">Popular</a>
                     <a href="#!" class="btn-active">Active</a>
                 </div>
             </div>
-            <div class="card-group flex flex-wrap justify-center gap-5 mt-11 lg:justify-between">
+            <div class="card-group">
                 <div class="card">
                     <div class="img-box">
                         <img src="./assets/images/member1.png" alt="member" class="absolute top-3 w-[142px] h-[142px]">
@@ -557,7 +659,7 @@
         </div>
     </section>
     <section id="app">
-        <div class="container flex flex-wrap justify-center lg:justify-between gap-5">
+        <div class="container">
             <div class="mt-8 lg:my-[122px]">
                 <h4 class="blueh4">Get Our Aplication</h4>
                 <h2 class="title-d w-[351px] mb-[18px]">
@@ -582,7 +684,7 @@
                 <h4 class="blueh4">Get Our Aplication</h4>
                 <h2 class="title-b mb-[80px]">Latest News</h2>
             </div>
-            <div class="card-box flex flex-wrap gap-5  justify-center lg:justify-between">
+            <div class="card-box">
                 <div class="card">
                     <img src="./assets/images/news1.png" alt="news" class="mb-[25px]">
                     <div class="line">
@@ -620,8 +722,8 @@
         </div>
     </section>
     <section id="footer">
-        <div class="container flex lg:justify-between flex-wrap lg:flex-nowrap justify-center gap-9">
-            <div class="left flex gap-5 md:justify-between lg:gap-10 flex-wrap justify-center">
+        <div class="container">
+            <div class="left">
                 <ul>
                     <li class="font-medium text-xl leading-5 text-white font-Inter mb-[38px]">
                         <h1>Home</h1>
