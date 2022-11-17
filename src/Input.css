@@ -5,6 +5,9 @@
     .content-auto {
         content-visibility: auto;
     }
+    body{
+        font-family:'Inter';
+    }
     
 }
 @layer components {
@@ -29,13 +32,13 @@
         @apply font-bold text-3xl lg:text-[56px] lg:leading-[66px] text-title font-inter
     }
     .title-a { /* text 36px line height 48px #0a093d*/
-        @apply text-2xl font-bold leading-[48px] font-inter text-title font-inter
+        @apply text-2xl font-bold lg:leading-[48px] font-inter text-title font-inter
         
         /* desktop */
         lg:text-4xl
     }
     .title-b { /* text 36px line height 36px #0a093d*/
-        @apply text-2xl font-bold leading-9 font-inter text-title text-center
+        @apply text-2xl font-bold lg:leading-9 font-inter text-title text-center
 
         /* desktop */
         lg:text-4xl 
@@ -178,10 +181,7 @@
     }
     
     #hero .action a{
-        @apply rounded-[14px] text-[14px] leading-[14px] 
-
-        /* > LG */
-        py-6 px-[42px] 
+        @apply rounded-[14px] text-[14px] leading-[14px]  lg:py-6 lg:px-[42px] px-7 py-4 text-center 
     }
 
     #hero .gambar{
@@ -194,7 +194,7 @@
     }
 
     #join .container{
-        @apply flex flex-wrap flex-wrap-reverse justify-center lg:flex-nowrap lg:justify-between items-center gap-5
+        @apply flex flex-wrap justify-center flex-wrap-reverse lg:flex-nowrap lg:justify-between items-center gap-5
     }
 
     #join .left{
@@ -202,15 +202,15 @@
     }
 
     #join .left h5{
-        @apply text-primary text-lg mb-[10px]
+        @apply text-primary text-lg mb-1 md:mb-[10px] text-center md:text-left
     }
 
     #join .left h1{
-        @apply title-a mb-4
+        @apply title-a mb-4 text-center md:text-left
     }
 
     #join .left p{
-        @apply par-a mb-9
+        @apply par-a mb-5 lg:mb-9
     }
 
     #join .left ul li{
@@ -221,7 +221,7 @@
     }
 
     #join .right{
-        @apply flex items-center gap-2 lg:gap-[29px]
+        @apply flex items-center gap-2 lg:gap-[29px] flex-col md:flex-row
     }
 
     #join .right .image{
@@ -323,11 +323,11 @@
     }
 
     #rating .right h4{
-        @apply blueh4
+        @apply blueh4 text-center lg:text-left
     }
 
     #rating .right h1{
-        @apply title-a mb-[18px]
+        @apply title-a mb-[18px] text-center lg:text-left
     }
 
     #rating .right p{
@@ -363,7 +363,7 @@
     }
 
     #community .card-box{
-        @apply flex flex-wrap gap-11 justify-center
+        @apply flex flex-wrap gap-3 md:gap-11 justify-center
     }
 
     #community .card{
@@ -424,7 +424,7 @@
     }
 
     #member .card-group .card{
-        @apply  flex flex-col justify-center text-center p-3 md:py-[30px] md:px-[52px] rounded-[14px] border-[2px] border-[0px_34px_68px_rgba(116,_115,_128,_0.1)] 
+        @apply  flex flex-col justify-center text-center py-5 px-9 md:py-[30px] md:px-[52px] rounded-[14px] border-[2px] border-[0px_34px_68px_rgba(116,_115,_128,_0.1)] 
 
         /* hover */
         hover:bg-cyan-100/50
@@ -501,15 +501,15 @@
     }
 
     #news .title h2{
-        @apply title-b mb-[80px]
+        @apply title-b mb-8 lg:mb-[80px]
     }
 
     #news .card-box{
-        @apply flex flex-wrap gap-5  justify-center lg:justify-between
+        @apply flex flex-wrap gap-6 justify-center lg:justify-between
     }
 
     #news .card{
-        @apply flex flex-col gap-6
+        @apply flex flex-col gap-2 lg:gap-6
     }
 
     #news .line::before{
@@ -521,7 +521,7 @@
         @apply
         
         /* li */
-        font-semibold text-[20px] leading-8 text-[#2F2C4A] mb-6 font-inter
+        font-semibold text-[20px] leading-8 text-[#2F2C4A] lg:mb-2 lg:mb-6 font-inter
         md:w-[260px]
     }
     #news .text a{
@@ -548,21 +548,25 @@
     }
 
     #footer .left{
-        @apply flex gap-5 md:justify-between lg:gap-10 flex-wrap justify-center
+        @apply flex gap-5 md:justify-between lg:gap-10 flex-col md:flex-row justify-center
+    }
+
+    #footer .left ul{
+        @apply text-center md:text-left mb-10 md:mb-0
     }
 
     #footer .left li h1{
-        @apply font-medium text-xl leading-5 text-white font-inter mb-[38px]
+        @apply font-medium text-xl leading-5 text-white font-inter mb-6 md:mb-[38px]
     }
 
     #footer .left li a{
-        @apply font-normal text-base leading-[46px] text-[#e7e7e7] tracking-[0.0125em]
+        @apply font-normal text-base md:leading-[46px] text-[#e7e7e7] tracking-[0.0125em]
     }
     #footer .right h3{
-        @apply font-semibold text-[20px] leading-8 text-white mb-6 font-inter md:w-[173px]
+        @apply font-semibold text-[20px] leading-8 text-white mb-6 font-inter md:w-[173px] text-center md:text-left
     }
     #footer .right p{
-        @apply par-a text-white max-w-[299px] mb-8
+        @apply par-a text-white max-w-[299px] mb-8 text-center md:text-left
     }
 
     #footer .input-box{

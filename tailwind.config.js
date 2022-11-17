@@ -5,7 +5,6 @@ module.exports = {
         fontFamily:{
             inter:['Inter'],
             sans:['Inter'],
-            body:['Inter'],
             
         }
         ,
