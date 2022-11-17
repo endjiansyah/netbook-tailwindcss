@@ -101,6 +101,12 @@
                 @apply text-base font-normal leading-[16px] text-secondary font-inter
             }
 
+            .btn{
+                @apply 
+                /* hover */
+                hover:bg-blue-700 hover:text-white
+            }
+
             /* .logo{
                 @apply w-[66px] h-[66px] flex justify-center items-center rounded-3xl
             }
@@ -118,6 +124,10 @@
             } */
 
             /* ---------------------- */
+            #header{
+                @apply border-b-[1px]  fixed w-full top-0 bg-white/90 backdrop-blur z-20
+            }
+
             #header .container{
                 @apply px-5 flex justify-between flex-wrap lg:flex-nowrap items-center lg:gap-[70px] gap-5 pt-[22px] pb-[18px]
             }
@@ -141,7 +151,8 @@
             }
 
             #header .menu-navigation a{
-                @apply not-italic text-sm font-medium leading-[14px] tracking-[0.01em]
+                @apply not-italic text-sm font-medium leading-[14px] tracking-[0.01em] 
+                hover:text-[#2b2b39] hover:font-semibold
             }
 
             #header .menu-navigation a.active{
@@ -162,11 +173,13 @@
             }
 
             #header .search-box input{
-                @apply text-xs bg-white/0 focus:ring-transparent border-0 w-[90px]
+                @apply text-xs bg-white/0 focus:ring-transparent border-0 w-[96px]
             }
 
             #header .button button{
                 @apply py-[18px] px-[44px] bg-primary text-white rounded-[14px] text-xs leading-[14px]
+
+                 hover:bg-blue-700
             }
 
 
@@ -191,7 +204,10 @@
             }
             
             #hero .action a{
-                @apply px-3 py-2 lg:py-6 lg:px-[42px] rounded-[14px] text-[14px] leading-[14px]
+                @apply px-3 py-2 rounded-[14px] text-[14px] leading-[14px] 
+
+                /* > LG */
+                lg:py-6 lg:px-[42px] 
             }
             
             #join{
@@ -207,6 +223,9 @@
                 @apply before:content-[''] before:inline-block before:w-[18px] before:h-[18px] before:bg-[url('./assets/images/logo/li-decor.svg')] before:mr-3 before:bg-cover before:bg-no-repeat 
                 /* li */
                 flex font-medium text-lg leading-[18px] text-blueli mb-4 items-center font-inter
+            }
+            #join .left{
+                @apply  items-start md:w-[406px] -mt-[9px]
             }
             #join .right{
                 @apply flex items-center gap-2 lg:gap-[29px]
@@ -247,14 +266,21 @@
                 /* span text */
                 text-xl leading-5 font-medium text-title lg:mb-8 mb-3
             }
+
             .card-rating h3{
                 /* gambar bintang */
                 @apply before:bg-[url('./assets/images/logo/Star.svg')]
             }
+
             .card-award h3{
                 /* gambar piala */
                 @apply before:bg-[url('./assets/images/logo/Trophy.svg')]
             }
+
+            #rating .gambar-bunder{
+                @apply flex -space-x-2 overflow-hidden
+            }
+
             .gambar-bunder img{
                 @apply inline-block h-6 w-6 rounded-full ring-2 ring-white
             }
@@ -266,9 +292,15 @@
             #rating .member h4{
                 @apply text-base leading-[18px] font-medium text-[#5d5b70]
             }
+            
             #rating .member h4 span{
                 @apply font-semibold text-primary
             }
+
+            #rating .card p{
+                @apply par-b my-5 md:my-10
+            }
+
             #rating .btn-go a{
                 @apply
                 /* after */
@@ -288,9 +320,29 @@
                 @apply after:bg-[url('./assets/images/logo/arrowblue.svg')] text-primary
             }
 
+            #rating .right{
+                @apply md:w-[381px] flex flex-col
+            }
+
+            #rating .right h4{
+                @apply blueh4
+            }
+
+            #rating .right h1{
+                @apply title-a mb-[18px]
+            }
+
+            #rating .right p{
+                @apply par-b pb-[38px]
+            }
+
 
             #rating .right a{
                 @apply md:w-[192px] box-border text-center py-[22px] px-[38px] bg-primary text-white -tracking-[0.02em] rounded-[14px]
+
+                /* hover */
+ 
+                 hover:bg-blue-700 hover:text-white
             }
 
             /* community */
@@ -298,22 +350,62 @@
                @apply bg-[linear-gradient(0deg,_rgba(241,_246,_253,_0)_1.63%,_#F1F6FD_20.5%,_#F1F6FD_58.57%,_#FFFFFF_100%)] pt-[60px] lg:pb-20 lg:mb-[46px]
             }
 
+            #community .title{
+                @apply text-center
+            }
+
+            #community .title h4{
+                @apply blueh4
+            }
+
+            #community .title p{
+                @apply par-a mx-auto max-w-[421px] mb-16
+            }
+
+            #community .title h2{
+                @apply title-b mt-[9px] mb-[19px]
+            }
+
+            #community .card-box{
+                @apply flex flex-wrap gap-11 justify-center
+            }
+
             #community .card{
-                @apply p-2 lg:pt-10 lg:pl-10 lg:pr-[65px] flex bg-white md:w-[522px] h-auto rounded-[14px] shadow-[14px_22px_52px_-12px_rgba(127,_127,_127,_0.13)] items-start hover:drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] flex-wrap justify-center
+                @apply p-2 lg:p-7 flex bg-white md:w-[522px] h-auto rounded-[14px] shadow-[14px_22px_52px_-12px_rgba(127,_127,_127,_0.13)] items-start hover:drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] flex-wrap justify-center  md:justify-between md:flex-nowrap
             }
 
             #community .text-card{
                 @apply mt-[6px] flex flex-col gap-[14px]
-                justify-center md:justify-start text-center
+                justify-center md:justify-start text-center md:text-left
             }
 
-            #community .text-card .title-c{
-                @apply justify-center md:justify-start
+            #community .text-card h1{
+                @apply justify-center md:justify-start title-c
+            }
+
+            #community .text-card p{
+                @apply par-b text-secondary
             }
 
             /* member */
             #member{
                 @apply py-[84px] lg:mb-[46px]
+            }
+
+            #member .title{
+                @apply text-center
+            }
+            
+            #member .title h4{
+                @apply blueh4
+            }
+
+            #member .title h2{
+                @apply  mt-[10px] mb-[18px] title-b
+            }
+
+            #member .title p{
+                @apply mx-auto max-w-[454px] mb-[38px] par-a
             }
 
             #member .btn-group{
@@ -325,37 +417,103 @@
                 hover:drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]
             }
             #member .btn-group a.btn-active{
-                @apply rounded-[14px] text-white bg-primary
+                @apply rounded-[14px] text-white bg-primary 
+
+                /* hover */
+                hover:bg-blue-700 hover:text-white
             }
 
             #member .card-group{
-                @apply flex flex-wrap justify-center gap-5 mt-11 lg:justify-between
+                @apply flex flex-wrap justify-center gap-5 mt-11 lg:justify-between lg:flex-nowrap
             }
 
             #member .card-group .card{
                 @apply  flex flex-col justify-center text-center p-3 md:py-[30px] md:px-[52px] rounded-[14px] border-[2px] border-[0px_34px_68px_rgba(116,_115,_128,_0.1)] 
+
+                /* hover */
+                hover:bg-cyan-100/50
             }
 
             #member .card-group .card .img-box{
                 @apply  relative mb-[29px] flex items-center justify-center
             }
 
+            #member .img-box .member{
+                @apply absolute top-3 w-[142px] h-[142px]
+            }
+
+            #member .img-box .member-box{
+                @apply w-[166px] h-auto z-10 h-[171px]
+            }
+
+            #member .card-group .card h1{
+                @apply title-c mb-[14px]
+            }
+
+            #member .card-group .card p{
+                @apply par-c
+            }
+
             /* app */
             #app{
                 @apply bg-[#E5F0FD]
             }
-
+            
             #app .container{
                 @apply flex flex-wrap justify-center lg:justify-between gap-5
             }
 
+            #app .left{
+                @apply mt-8 lg:my-[122px]
+            }
+            
+            #app h2{
+                @apply  lg:w-[351px] mb-[18px] title-d
+            }
+
+            #app p{
+                @apply  text-secondary lg:w-[341px] mb-9 par-b
+            }
+
+            #app .btn-group{
+                @apply flex gap-2 md:gap-5 items-center
+            }
+            
             #app .btn-group a:hover{
                 @apply drop-shadow-[0_4px_4px_rgba(0,_0,_0,_0.25)]
             }
 
+            #app .right img{
+                @apply lg:w-[440px] mt-11
+            }
+
             /* news */
+            #news{
+                @apply py-[125px]
+            }
+
+            #news .container{
+                @apply justify-center
+            }
+
+            #news .title{
+                @apply text-center mb-[10px]
+            }
+
+            #news .title h4{
+                @apply blueh4
+            }
+
+            #news .title h2{
+                @apply title-b mb-[80px]
+            }
+
             #news .card-box{
                 @apply flex flex-wrap gap-5  justify-center lg:justify-between
+            }
+
+            #news .card{
+                @apply flex flex-col gap-6
             }
 
             #news .line{
@@ -396,21 +554,40 @@
                 @apply flex gap-5 md:justify-between lg:gap-10 flex-wrap justify-center
             }
 
-            #footer .text{
+            #footer .left li h1{
+                @apply font-medium text-xl leading-5 text-white font-inter mb-[38px]
+            }
+
+            #footer .left li a{
                 @apply font-normal text-base leading-[46px] text-[#e7e7e7] tracking-[0.0125em]
             }
             #footer .right h3{
                 @apply font-semibold text-[20px] leading-8 text-white mb-6 font-inter md:w-[173px]
             }
+            #footer .right p{
+                @apply par-a text-white max-w-[299px] mb-8
+            }
 
             #footer .input-box{
                 @apply  rounded-xl border-[1px] border-[rgba(255,_255,_255,_0.85)]
+            }
+            #footer .input-box form{
+                @apply md:pl-6 flex items-center justify-between
+            }
+            #footer .input-box input{
+                @apply bg-white/0 border-0 focus:ring-transparent w-[150px]
             }
             #footer .input-box button{
                 @apply py-4 px-6 text-[#2b2b39] text-base leading-4 font-medium bg-white rounded-xl
             }
 
             /* footernya-footer */
+            #footernya-footer{
+                @apply bg-[#20202d] py-[30px]
+            }
+            #footernya-footer .container{
+                @apply flex flex-wrap md:justify-between items-center justify-center gap-2
+            }
             #footernya-footer p{
                 @apply font-normal text-sm leading-[14px] text-[#f6f6f6]
             }
@@ -419,7 +596,7 @@
 </head>
 <body>
   
-    <nav id="header" class="border-b-[1px] border-[primary]/10 fixed w-full top-0 bg-white/90 backdrop-blur z-20">
+    <nav id="header" class="border-[primary]/10">
         <div class="container">
             <div class="image-box">
                 <img src="./assets/images/logo/logo.svg" alt="logo Netbook">
@@ -475,8 +652,8 @@
                 </h1>
                 <p>More than 2 billion people in over countries use socibook to stay in touch with friends & family.</p>
                 <div class="action flex gap-[18px]">
-                    <a href="#!" class="bg-primary text-white">About More</a>
-                    <a href="#!" class="text-primary border-primary border-[1px] bg-white box-border">About More</a>
+                    <a href="#!" class="bg-primary text-white btn">About More</a>
+                    <a href="#!" class="text-primary border-primary border-[1px] bg-white box-border btn">Invite Friend</a>
                 </div>
             </div>
             <div class="gambar object-cover">
@@ -486,7 +663,7 @@
     </section>
     <section id="join">
         <div class="container">
-            <div class="left items-start md:w-[406px] -mt-[9px]">
+            <div class="left">
                 <p class="text-primary text-lg mb-[10px]">
                     Whats Netbooks?
                 </p>
@@ -515,19 +692,20 @@
         <div class="container">
             <div class="left">
                 <div class="card card-rating">
-                    <h3 class="">4.8 Rating</h3>
+                    <h3>4.8 Rating</h3>
                     <div class="member">
-                        <div class="gambar-bunder flex -space-x-2 overflow-hidden">
+                        <div class="gambar-bunder">
                             <img src="./assets/images/ikiwong.jpg" alt="man"/>
                             <img src="./assets/images/ikiwong.jpg" alt="man"/>
                             <img src="./assets/images/ikiwong.jpg" alt="man"/>
                         </div>
-                        <div class="total-member"></div>
                         <h4 class="tracking-[0.02em]">
                             <span>+836k</span> Members
                         </h4>
                     </div>
-                    <p class="par-b my-5 md:my-10">More than 2 billion we people over countries use socibooks we to stay in touch with friends.</p>
+                    <p>
+                        More than 2 billion we people over countries use socibooks we to stay in touch with friends.
+                    </p>
                     <div class="btn-go">
                         <a href="#!">Join Our Community</a>
                     </div>
@@ -536,106 +714,113 @@
                     <h3>Awwwards</h3>
                     <div class="member">
                         <img src="./assets/images/github.png" alt="logo github tapi remuk">
-                        <div class="total-member"></div>
-                        <h4>
-                            Best of <span>2021</span> on Github
-                        </h4>
+                        <h4>Best of <span>2021</span> on Github</h4>
                     </div>
-                    <p class="par-b my-5 md:my-10">More than 2 billion we people over countries use socibooks we to stay in touch with friends.</p>
+                    <p>
+                        More than 2 billion we people over countries use socibooks we to stay in touch with friends.
+                    </p>
                     <div class="btn-go">
                         <a href="#!">Join Our Community</a>
                     </div>
                 </div>  
             </div>
-            <div class="right md:w-[381px]">
-                <div class=" flex flex-col">
-                <h4 class="blueh4">
-                    Our Achievement
-                </h4>
-                <h1 class="title-a mb-[18px]">
-                    We are Connecting You The Digital Life.
-                </h1>
-                <p class="par-b pb-[38px]">
+            <div class="right">
+                <h4>Our Achievement</h4>
+                <h1>We are Connecting You The Digital Life.</h1>
+                <p>
                     The scope the Social Media becomes crucial Is helps the business to directly engage with their needs and wants.
                 </p>
-
                 <a href="#!">Discover me</a>
-                </div>
             </div>
         </div>
     </section>
+
+    <!-- community (yang ada 6 card) -->
     <section id="community">
         <div class="container">
-            <div class="text-center">
-                <h4 class="blueh4">
-                    Our Community
-                </h4>
-                <h2 class="title-b mt-[9px] mb-[19px]">
-                    Community Main Feature
-                </h2>
-                <p class="par-a mx-auto max-w-[421px] mb-16">The wise man therefore always holds in these matters to this principle of selection.</p>
+            <div class="title">
+                <h4>Our Community</h4>
+                <h2>Community Main Feature</h2>
+                <p>
+                    The wise man therefore always holds in these matters to this principle of selection.
+                </p>
             </div>
-            <div class="flex flex-wrap gap-11 justify-center">
+
+            <div class="card-box">
+
                 <div class="card">
-                    <!-- <div class="logo logo-blue">
-                        <img src="./assets/images/logo/Icon1.svg" alt="icon 1">
-                    </div> -->
                     <img src="./assets/images/ico1.png" alt="icon" class="object-contain" class="object-contain">
                     <div class="text-card">
-                        <h1 class="title-c">Members, Friends</h1>
-                        <p class="par-b text-secondary">Members, Friends Connection ( like followers ), Private Message</p>
+                        <h1>Members, Friends</h1>
+                        <p>
+                            Members, Friends Connection ( like followers ), Private Message
+                        </p>
                     </div>
                 </div>
+
                 <div class="card">
                     <img src="./assets/images/ico2.png" alt="icon" class="object-contain">
                     <div class="text-card">
-                        <h1 class="title-c">Groups</h1>
-                        <p class="par-b text-secondary">Your users can create groups to let other users to join and talk</p>
+                        <h1>Groups</h1>
+                        <p>
+                            Your users can create groups to let other users to join and talk
+                        </p>
                     </div>
                 </div>
+
                 <div class="card">
                     <img src="./assets/images/ico3.png" alt="icon" class="object-contain">
                     <div class="text-card">
-                        <h1 class="title-c">Forum</h1>
-                        <p class="par-b text-secondary">Forum is ready by BBPress. Your users can make topics and talk.</p>
+                        <h1>Forum</h1>
+                        <p>
+                            Forum is ready by BBPress. Your users can make topics and talk.
+                        </p>
                     </div>
                 </div>
+
                 <div class="card">
                     <img src="./assets/images/ico4.png" alt="icon" class="object-contain">
                     <div class="text-card">
-                        <h1 class="title-c">Custom Module</h1>
-                        <p class="par-b text-secondary">You can create Members, Groups Module. We already created 3 modules. It's by drag & drop live builder.</p>
+                        <h1>Custom Module</h1>
+                        <p>
+                            You can create Members, Groups Module. We already created 3 modules. It's by drag & drop live builder.
+                        </p>
                     </div>
                 </div>
+
                 <div class="card">
                     <img src="./assets/images/ico5.png" alt="icon" class="object-contain">
                     <div class="text-card">
-                        <h1 class="title-c">List Builder</h1>
-                        <p class="par-b text-secondary">Members, Groups list can be modified by drag & drop live builder.</p>
+                        <h1>List Builder</h1>
+                        <p>
+                            Members, Groups list can be modified by drag & drop live builder.
+                        </p>
                     </div>
                 </div>
+
                 <div class="card">
                     <img src="./assets/images/ico6.png" alt="icon" class="object-contain">
                     <div class="text-card">
-                        <h1 class="title-c">List Scroll Effects</h1>
-                        <p class="par-b text-secondary">8 different scroll effects are ready.
-                            You can always change by your tastes.</p>
+                        <h1>List Scroll Effects</h1>
+                        <p>
+                            8 different scroll effects are ready. You can always change by your tastes.
+                        </p>
                     </div>
                 </div>
 
             </div>
         </div>
     </section>
+
+    <!-- member (yang ada 4 card orang) -->
     <section id="member">
         <div class="container">
-            <div class="text-center">
-                <h4 class="blueh4">
-                    Valuable Team
-                </h4>
-                <h2 class="title-b mt-[10px] mb-[18px]">
-                    Our Active Member
-                </h2>
-                <p class="par-a mx-auto max-w-[454px] mb-[38px]">when an unknown printer took a galley of type and meeting fari scrambled it.</p>
+            <div class="title">
+                <h4>Valuable Team</h4>
+                <h2>Our Active Member</h2>
+                <p>
+                    when an unknown printer took a galley of type and meeting fari scrambled it.
+                </p>
                 <div class="btn-group">
                     <a href="#!">Newst</a>
                     <a href="#!">Popular</a>
@@ -645,48 +830,50 @@
             <div class="card-group">
                 <div class="card">
                     <div class="img-box">
-                        <img src="./assets/images/member1.png" alt="member" class="absolute top-3 w-[142px] h-[142px]">
-                        <img src="./assets/images/Abstrack.png" alt="centang" class="w-[166px] h-auto z-10 h-[171px]">
+                        <img src="./assets/images/member1.png" alt="member" class="member">
+                        <img src="./assets/images/Abstrack.png" alt="centang" class="member-box">
                     </div>
-                    <h1 class="title-c mb-[14px]">Fahim Rahman</h1>
-                    <p class="par-c">@rahman</p>
+                    <h1>Fahim Rahman</h1>
+                    <p>@rahman</p>
                 </div>
                 <div class="card">
                     <div class="img-box">
-                        <img src="./assets/images/member2.png" alt="member" class="absolute top-3 w-[142px] h-[142px]">
-                        <img src="./assets/images/Abstrack.png" alt="centang" class="w-[166px] h-auto z-10 h-[171px]">
+                        <img src="./assets/images/member2.png" alt="member" class="member">
+                        <img src="./assets/images/Abstrack.png" alt="centang" class="member-box">
                     </div>
-                    <h1 class="title-c mb-[14px]">Kazi Rahman</h1>
-                    <p class="par-c">@Rahman</p>
+                    <h1>Kazi Rahman</h1>
+                    <p>@Rahman</p>
                 </div>
                 <div class="card">
                     <div class="img-box">
-                        <img src="./assets/images/member3.png" alt="member" class="absolute top-3 w-[142px] h-[142px]">
-                        <img src="./assets/images/Abstrack.png" alt="centang" class="w-[166px] h-auto z-10 h-[171px]">
+                        <img src="./assets/images/member3.png" alt="member" class="member">
+                        <img src="./assets/images/Abstrack.png" alt="centang" class="member-box">
                     </div>
-                    <h1 class="title-c mb-[14px]">Masterero Ali</h1>
-                    <p class="par-c">@Master</p>
+                    <h1>Masterero Ali</h1>
+                    <p>@Master</p>
                 </div>
                 <div class="card">
                     <div class="img-box">
-                        <img src="./assets/images/member4.png" alt="member" class="absolute top-3 w-[142px] h-[142px]">
-                        <img src="./assets/images/Abstrack.png" alt="centang" class="w-[166px] h-auto z-10 h-[171px]">
+                        <img src="./assets/images/member4.png" alt="member" class="member">
+                        <img src="./assets/images/Abstrack.png" alt="centang" class="member-box">
                     </div>
-                    <h1 class="title-c mb-[14px]">Alia Karon</h1>
-                    <p class="par-c">@Alia</p>
+                    <h1>Alia Karon</h1>
+                    <p>@Alia</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- app (yang ada gambar HP) -->
     <section id="app">
         <div class="container">
-            <div class="mt-8 lg:my-[122px]">
+            <div class="left">
                 <h4 class="blueh4">Get Our Aplication</h4>
-                <h2 class="title-d lg:w-[351px] mb-[18px]">
+                <h2>
                     You Can Easily Find This App…!
                 </h2>
-                <p class="par-b text-secondary lg:w-[341px] mb-9">I say chap that’s suing lavatory chip shop gosh off his smashing boot are you taking the piss posh loo brilliant.</p>
-                <div class="btn-group flex gap-2 md:gap-5 items-center">
+                <p>I say chap that’s suing lavatory chip shop gosh off his smashing boot are you taking the piss posh loo brilliant.</p>
+                <div class="btn-group">
                     <a href="#!">
                         <img src="./assets/images/bt-apple.png" alt="apple button">
                     </a>
@@ -695,18 +882,22 @@
                     </a>
                 </div>
             </div>
-            <img src="./assets/images/mobile.png" alt="mobile" class="lg:w-[440px] mt-11">
+            <div class="right">
+                <img src="./assets/images/mobile.png" alt="mobile">
+            </div>
         </div>
     </section>
-    <section id="news" class="py-[125px]">
-        <div class="container justify-center ">
-            <div class="text-center mb-[10px]">
-                <h4 class="blueh4">Get Our Aplication</h4>
-                <h2 class="title-b mb-[80px]">Latest News</h2>
+
+    <!-- News (bawahnya gambar HP) -->
+    <section id="news">
+        <div class="container">
+            <div class="title">
+                <h4>Get Our Aplication</h4>
+                <h2>Latest News</h2>
             </div>
             <div class="card-box">
                 <div class="card">
-                    <img src="./assets/images/news1.png" alt="news" class="mb-[25px]">
+                    <img src="./assets/images/news1.png" alt="news">
                     <div class="line">
                         <div class="text">
                             <h3>
@@ -717,7 +908,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="./assets/images/news2.png" alt="news" class="mb-[25px]">
+                    <img src="./assets/images/news2.png" alt="news">
                     <div class="line">
                         <div class="text">
                             <h3>
@@ -728,7 +919,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="./assets/images/news3.png" alt="news" class="mb-[25px]">
+                    <img src="./assets/images/news3.png" alt="news">
                     <div class="line">
                         <div class="text">
                             <h3>
@@ -741,111 +932,77 @@
             </div>
         </div>
     </section>
+
+    <!-- footer -->
     <section id="footer">
         <div class="container">
             <div class="left">
                 <ul>
-                    <li class="font-medium text-xl leading-5 text-white font-Inter mb-[38px]">
-                            <h1>Home</h1>
-                        </a>
+                    <li>
+                        <h1>Home</h1>
                     </li>
-                    <li class="text">
-                        <a href="#!">
-                            Home
-                        </a>
+                    <li>
+                        <a href="#!">Home</a>
                     </li>
-                    <li class="text">
-                        <a href="#!">
-                            community
-                        </a>
+                    <li>
+                        <a href="#!">community</a>
                     </li>
-                    <li class="text">
-                        <a href="#!">
-                            Event
-                        </a>
+                    <li>
+                        <a href="#!">Event</a>
                     </li>
-                    <li class="text">
-                        <a href="#!">
-                            Contact
-                        </a>
+                    <li>
+                        <a href="#!">Contact</a>
                     </li>
                 </ul>
                 <ul>
-                    <li class="font-medium text-xl leading-5 text-white font-Inter mb-[38px]">
-                            <h1>Resources</h1>
-                        </a>
+                    <li>
+                        <h1>Resources</h1>
                     </li>
-                    <li class="text">
-                        <a href="#!">
-                            Blog
-                        </a>
+                    <li>
+                        <a href="#!">Blog</a>
                     </li>
-                    <li class="text">
-                        <a href="#!">
-                            News
-                        </a>
+                    <li>
+                        <a href="#!">News</a>
                     </li>
-                    <li class="text">
-                        <a href="#!">
-                            Guides
-                        </a>
+                    <li>
+                        <a href="#!">Guides</a>
                     </li>
-                    <li class="text">
-                        <a href="#!">
-                            Help Center
-                        </a>
+                    <li>
+                        <a href="#!">Help Center</a>
                     </li>
                 </ul>
                 <ul>
-                    <li class="font-medium text-xl leading-5 text-white font-Inter mb-[38px]">
-                            <h1>Community</h1>
-                        </a>
+                    <li>
+                        <h1>Community</h1>
                     </li>
-                    <li class="text">
-                        <a href="#!">
-                            NewsFeed
-                        </a>
+                    <li>
+                        <a href="#!">NewsFeed</a>
                     </li>
-                    <li class="text">
-                        <a href="#!">
-                            Profile 
-                        </a>
+                    <li>
+                        <a href="#!">Profile</a>
                     </li>
-                    <li class="text">
-                        <a href="#!">
-                            Friends
-                        </a>
+                    <li>
+                        <a href="#!">Friends</a>
                     </li>
-                    <li class="text">
-                        <a href="#!">
-                            Forums
-                        </a>
+                    <li>
+                        <a href="#!">Forums</a>
                     </li>
                 </ul>
                 <ul>
-                    <li class="font-medium text-xl leading-5 text-white font-Inter mb-[38px]">
-                            <h1>Main Links</h1>
-                        </a>
+                    <li>
+                        <h1>Main Links</h1>
                     </li>
-                    <li class="text">
-                        <a href="#!">
-                            Members
-                        </a>
+                    <li>
+                        <a href="#!">Members</a>
                     </li>
-                    <li class="text">
-                        <a href="#!">
-                            Activity 
-                        </a>
+                    <li>
+                        <a href="#!">Activity</a>
                     </li>
-                    <li class="text">
-                        <a href="#!">
-                            Groups
-                        </a>
+                    <li>
+                        <a href="#!">Groups</a>
                     </li>
-                    <li class="text">
-                        <a href="#!">
-                            Private Group
-                        </a>
+                    <li>
+                        <a href="#!">Private Group</a>
                     </li>
                 </ul>
             </div>
@@ -853,22 +1010,22 @@
                 <h3>
                     Subscribe Cirkle Newsletter
                 </h3>
-                <p class="par-a text-white max-w-[299px] mb-8">
+                <p>
                     Subscribe to be the first one to know about updates. Enter your email
                 </p>
                 <div class="input-box">
-                    <form action="post" class="md:pl-6 flex items-center justify-between">
-                        <input type="text" name="input" id="aaa" placeholder="Email Address" class="bg-white/0 border-0 focus:ring-transparent w-[150px]">
-                        <button class="">
-                            Subscribe
-                        </button>
+                    <form action="post">
+                        <input type="text" name="input" id="aaa" placeholder="Email Address">
+                        <button>Subscribe</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
-    <section id="footernya-footer" class="bg-[#20202d] py-[30px]">
-        <div class="container flex flex-wrap md:justify-between items-center justify-center gap-2">
+
+    <!-- footernya-footer (paling bawah) -->
+    <section id="footernya-footer">
+        <div class="container">
             <p>
                 Besnik Creative Agency.
             </p>
